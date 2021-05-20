@@ -42,6 +42,7 @@ return(
     </Form>
 </Navbar>
 <Container margin='auto'>
+  <h2>Presente uno de estos cupones en la sucursal para reclamarlo</h2>
       <CardDeck>
         {data.map(dataItem =>(
           
