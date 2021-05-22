@@ -37,7 +37,7 @@ function login(){
                   
               }).catch(error => {
                 if(data.usuario=="admin"&&data.contraseña=="root"){
-                  window.open('http://localhost/proyecto-final/public/inicioAdmin');
+                  location.href='http://localhost/proyecto-final/public/inicioAdmin';
                 }else{
                   setShow(true)
                 }
