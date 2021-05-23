@@ -12,8 +12,6 @@ function Delete(){
     const [data, setData] = useState({
         usuario: ''
     })
-  const [Usuario, setUsuario] = useState([])
-
   const handleInputChange = (event) => {
       // console.log(event.target.name)
       // console.log(event.target.value)

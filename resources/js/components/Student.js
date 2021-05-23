@@ -13,7 +13,6 @@ function Student(){
     correo:'',
     contraseña:''
   })
-  const [Usuario, setUsuario] = useState([])
 
   const handleInputChange = (event) => {
       // console.log(event.target.name)
