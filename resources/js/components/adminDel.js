@@ -7,7 +7,7 @@ function adminDel(){
     const [show, setShow] = useState(false);
     const [show2, setShow2] = useState(false);
     const toggleShowA = () => setShow(!show);
-    const toggleShowB = () => setShow2(!show);
+    const toggleShowB = () => setShow2(!show2);
 
     const [data, setData] = useState({
         codigo: ''

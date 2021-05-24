@@ -35,8 +35,13 @@ function change(){
           config: { headers: {'Content-Type': 'multipart/form-data' }}
           })
           .then(response=>{
-            setShow2(true)
-            console.log('Sí')
+            if(response.data[0]!=null){
+              setShow2(true)
+              console.log('Sí')
+            }else{
+              setShow(true)
+              console.log('No\n', error.message ) 
+            }
           })
           .catch(error => {
             setShow(true)

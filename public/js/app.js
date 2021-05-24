@@ -2564,11 +2564,6 @@ function Student() {
       data = _useState4[0],
       setData = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
-      _useState6 = _slicedToArray(_useState5, 2),
-      Usuario = _useState6[0],
-      setUsuario = _useState6[1];
-
   var handleInputChange = function handleInputChange(event) {
     // console.log(event.target.name)
     // console.log(event.target.value)
@@ -2870,7 +2865,7 @@ function adminCha() {
   };
 
   var toggleShowB = function toggleShowB() {
-    return setShow2(!show);
+    return setShow2(!show2);
   };
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
@@ -2909,8 +2904,13 @@ function adminCha() {
                   }
                 }
               }).then(function (response) {
-                console.log('Sí');
-                setShow(true);
+                if (response.data[0] != null) {
+                  setShow(true);
+                  console.log('Sí');
+                } else {
+                  setShow2(true);
+                  console.log('No\n', error.message);
+                }
               })["catch"](function (error) {
                 setShow2(true);
                 console.log('No\n', error.message);
@@ -3100,7 +3100,7 @@ function adminDel() {
   };
 
   var toggleShowB = function toggleShowB() {
-    return setShow2(!show);
+    return setShow2(!show2);
   };
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({
@@ -3349,8 +3349,13 @@ function change() {
                   }
                 }
               }).then(function (response) {
-                setShow2(true);
-                console.log('Sí');
+                if (response.data[0] != null) {
+                  setShow2(true);
+                  console.log('Sí');
+                } else {
+                  setShow(true);
+                  console.log('No\n', error.message);
+                }
               })["catch"](function (error) {
                 setShow(true);
                 console.log('No\n', error.message);
@@ -3540,11 +3545,6 @@ function Delete() {
       _useState6 = _slicedToArray(_useState5, 2),
       data = _useState6[0],
       setData = _useState6[1];
-
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]),
-      _useState8 = _slicedToArray(_useState7, 2),
-      Usuario = _useState8[0],
-      setUsuario = _useState8[1];
 
   var handleInputChange = function handleInputChange(event) {
     // console.log(event.target.name)
@@ -4038,7 +4038,7 @@ function vistaUser() {
   };
 
   var toggleShowB = function toggleShowB() {
-    return setShow2(!show);
+    return setShow2(!show2);
   };
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)({

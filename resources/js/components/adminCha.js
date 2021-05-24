@@ -7,7 +7,7 @@ function adminCha(){
     const [show, setShow] = useState(false);
     const [show2, setShow2] = useState(false);
     const toggleShowA = () => setShow(!show);
-    const toggleShowB = () => setShow2(!show);
+    const toggleShowB = () => setShow2(!show2);
 
     const [data, setData] = useState({
         codigo: '',
@@ -36,8 +36,13 @@ function adminCha(){
         config: { headers: {'Content-Type': 'multipart/form-data' }}
         })
         .then(response=>{
-          console.log('Sí')
-          setShow(true)
+          if(response.data[0]!=null){
+            setShow(true)
+            console.log('Sí')
+          }else{
+            setShow2(true)
+            console.log('No\n', error.message ) 
+          }
         })
         .catch(error => {
           setShow2(true)
