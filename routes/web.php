@@ -25,6 +25,9 @@ Route::view('/inicioAdmin','welcome');
 Route::view('/delete','welcome');
 Route::view('/Adelete','welcome');
 Route::view('/Achange','welcome');
+Route::view('/Achange','welcome');
+Route::view('/Asearch','welcome');
+
 
 
 

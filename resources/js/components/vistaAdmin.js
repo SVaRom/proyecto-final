@@ -68,6 +68,9 @@ return (
     <Nav.Link eventKey="c" href='http://localhost/proyecto-final/public/Achange'>Modificar producto</Nav.Link>
   </Nav.Item>
   <Nav.Item>
+    <Nav.Link eventKey="d" href='http://localhost/proyecto-final/public/Asearch'>Buscar producto</Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
     <Nav.Link eventKey="disabled" href='http://localhost/proyecto-final/public/login'>
       Return login
     </Nav.Link>

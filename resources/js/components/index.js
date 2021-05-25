@@ -11,6 +11,7 @@ import vistaAdmin from './vistaAdmin';
 import Delete from './delete';
 import adminDel from './adminDel';
 import adminCha from './adminCha';
+import adminSearch from './adminSearch'
 
 ReactDOM.render (
 (
@@ -27,6 +28,7 @@ ReactDOM.render (
                 <Route exact path='/proyecto-final/public/delete' component={Delete} />
                 <Route exact path='/proyecto-final/public/Adelete' component={adminDel} />
                 <Route exact path='/proyecto-final/public/Achange' component={adminCha} />
+                <Route exact path='/proyecto-final/public/Asearch' component={adminSearch} />
             </Switch>
         </Router>
     </BrowserRouter>

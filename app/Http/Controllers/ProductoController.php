@@ -53,7 +53,8 @@ class ProductoController extends Controller
      */
     public function show(Request $request)
     {
-        //
+        $producto = DB::table('productos')->where('codigo', $request->codigo)->get();
+        return $producto;
     }
 
     /**

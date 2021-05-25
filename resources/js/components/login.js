@@ -70,7 +70,7 @@ function login(){
 <div className="wrapper fadeInDown">
   <div id="formContent">
   <div className="fadeIn first">
-    <h1>Inicia sesión</h1>
+    <h1>Log in</h1>
     </div>
     <form>
     <input type="text"  className="fadeIn second" name="usuario" placeholder="Username" onChange={handleInputChange}/>
