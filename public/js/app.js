@@ -3355,7 +3355,7 @@ function adminSearch() {
                 }
               }).then(function (response) {
                 if (response.data[0] != null) {
-                  setProducto(response.data[0]);
+                  setProducto(response.data);
                   console.log(Producto);
                 } else {
                   Producto.codigo = "";
@@ -3469,16 +3469,18 @@ function adminSearch() {
               children: "Price"
             })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("tbody", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-              children: Producto.codigo
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
-              children: Producto.nombre
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("th", {
-              children: ["$", Producto.precio]
-            })]
-          })
+        }), Producto.map(function (dataItem) {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("tbody", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("tr", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                children: dataItem.codigo
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("th", {
+                children: dataItem.nombre
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("th", {
+                children: ["$", dataItem.precio]
+              })]
+            })
+          }, dataItem.codigo);
         })]
       })]
     })]

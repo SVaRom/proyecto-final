@@ -32,7 +32,7 @@ function adminSearch(){
               })
               .then(response=>{
                   if(response.data[0]!=null){
-                    setProducto(response.data[0])
+                    setProducto(response.data)
                     console.log(Producto)
                   }else{
                         Producto.codigo=""
@@ -97,13 +97,15 @@ function adminSearch(){
       <th>Price</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th>{Producto.codigo}</th>
-      <th>{Producto.nombre}</th>
-      <th>${Producto.precio}</th>
-    </tr>
+  {Producto.map(dataItem=>(
+          <tbody  key={dataItem.codigo}>
+          <tr>
+        <th>{dataItem.codigo}</th>
+      <th>{dataItem.nombre}</th>
+      <th>${dataItem.precio}</th>
+      </tr>
     </tbody>
+      ))}
     </Table>
     </Container>
 </div>
